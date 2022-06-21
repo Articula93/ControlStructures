@@ -9,7 +9,9 @@ using namespace std;
 //#define FIGURA_4
 //#define FIGURA_5
 //#define FIGURA_6
-#define FIGURA_7
+//#define FIGURA_7
+//#define FIGURA_8
+#define FIGURA_9
 int main()
 {
 #if defined MULTIPLICATION_TABLE
@@ -129,6 +131,35 @@ int main()
 
 #endif
 #if defined FIGURA_7
-
+	for (int i = 0; i < 5; i++)
+	{
+		for (int j = 0; j < i; j++) cout << "  ";
+		for (int j = i; j < 5; j++) cout << "* ";
+		cout << endl;
+	}
+#endif
+#if defined FIGURA_8
+	for (int i = 0; i < 5; i++)
+	{
+		for (int j = i + 1; j < 5; j++) cout << "  ";
+		for (int j = 0; j <= i; j++) cout << "* ";
+		cout << endl;
+	}
+#endif
+#if defined FIGURA_9
+	for (int i = 0; i < 5; i++)
+	{
+		for (int j = i; j < 5; j++) cout << " "; cout << "/";
+		for (int j = 0; j < i; j++) cout << "  "; cout << "\\";
+		cout << endl;
+	}
+	for (int i = 0; i < 5; i++)
+	{
+		for (int j = 0; j < i + 1; j++) cout << " "; cout << "\\";
+		for (int j = i + 1; j < 5; j++) cout << "  "; cout << "/";
+		cout << endl;
+	}
+	
+	
 #endif
 }
